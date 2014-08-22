@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>flux, fluid* &amp; Co.</title>
+    <link rel="stylesheet" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="assets/fonts/yanone-kaffeesatz.css"/>
+    <link rel="stylesheet" href="bower_components/Flowtime.js/css/flowtime.css"/>
+    <link rel="stylesheet" href="bower_components/prism/themes/prism.css"/>
+    <link rel="stylesheet" href="assets/css/theme.css"/>
+</head>
+<body class="">
+    <div class="flowtime">
+        <div class="ft-section" data-id="section-1">
+            <div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Titel">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>flux, fluid* &amp; Co.</h1>
+                        <h2>Das FluidTYPO3-Universum aus Templating-Perspektive</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="bower_components/Flowtime.js/js/brav1toolbox.js"></script>
+    <script src="bower_components/Flowtime.js/js/flowtime.js"></script>
+    <script src="bower_components/prism/prism.js"></script>
+
+    <script>
+        Flowtime.showProgress( true );
+        Flowtime.parallaxInPx( true );
+        Flowtime.onNavigation( onNavigation );
+        function onNavigation( e ) {
+            document.title.replace( "flux, fluid* &amp; Co. | ", "" );
+        }
+        Flowtime.start();
+    </script>
+</body>
+</html>
