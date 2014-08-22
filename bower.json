@@ -1,18 +1,19 @@
 {
-    "name": "TYPO3CAMP2014-flux",
-    "version": "1.0.0",
-    "authors": [
-        "G. Bodenschatz <g.bodenschatz@ecentral.de>"
-    ],
-    "license": "MIT",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "Flowtime.js": "marcolago/flowtime.js"
-    }
+  "name": "TYPO3CAMP2014-flux",
+  "version": "1.0.0",
+  "authors": [
+    "G. Bodenschatz <g.bodenschatz@ecentral.de>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Flowtime.js": "marcolago/flowtime.js",
+    "prism": "LeaVerou/prism#f3fa64b837"
+  }
 }
