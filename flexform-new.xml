@@ -1,0 +1,10 @@
+<!-- Resources/Templates/Plugin/Template.html -->
+<f:section name="Configuration">
+	<flux:form id="plugin" label="Plugin">
+		<flux:form.sheet name="data" label="Settings">
+			<flux:form.input name="targetPage">
+				<flux:wizard.link />
+			</flux:form.input>
+		</flux:form.sheet>
+	</flux:form>
+</f:section>

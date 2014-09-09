@@ -1,0 +1,10 @@
+<?php
+// ext_tables.php
+
+$pluginSignature = strtolower( $extensionName ) . '_pluginname';
+
+$TCA[ 'tt_content' ][ 'types' ][ 'list' ][ 'subtypes_addlist' ][ $pluginSignature ] = 'pi_flexform';
+
+\FluidTYPO3\Flux\Core::registerConfigurationProvider(
+	'Gb\\Btug\\Provider\\PluginConfigurationProvider'
+);

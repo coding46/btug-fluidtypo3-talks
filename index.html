@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8">
     <title>flux, fluid* &amp; Co.</title>
     <link rel="stylesheet" href="assets/css/reset.css"/>
-    <link rel="stylesheet" href="assets/fonts/yanone-kaffeesatz.css"/>
+    <link rel="stylesheet" href="assets/fonts/amaranth.css"/>
     <link rel="stylesheet" href="bower_components/Flowtime.js/css/flowtime.css"/>
     <link rel="stylesheet" href="bower_components/prism/themes/prism.css"/>
     <link rel="stylesheet" href="assets/css/theme.css"/>
@@ -11,15 +12,232 @@
 <body class="">
     <div class="flowtime">
         <div class="ft-section" data-id="section-1">
-            <div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Titel">
+            <div id="/section-1/page-1" class="ft-page" data-id="page-1" data-title="Title">
                 <div class="stack-center">
                     <div class="stacked-center">
                         <h1>flux, fluid* &amp; Co.</h1>
-                        <h2>Das FluidTYPO3-Universum aus Templating-Perspektive</h2>
+                        <h2>Das FluidTYPO3-Universum aus Entwickler-Perspektive</h2>
+                    </div>
+                </div>
+            </div>
+            <div id="/section-1/page-2" class="ft-page" data-id="page-1" data-title="toc">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                    <ol>
+                        <li>Automagische Controller + Actions</li>
+                        <li>Plugin-Konfiguration via Fluid</li>
+                        <li>TCA-Building via Fluid</li>
+						<li>Informationen, Quellen</li>
+						<li>Weiterführendes, Ausblick</li>
+                    </ol>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="ft-section" data-id="section-2">
+            <div id="/section-2/page-1" class="ft-page" data-id="page-3" data-title="Title">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>Automagische Controller + Actions</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="/section-2/page-2" class="ft-page" data-id="page-4" data-title="toc">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <ul>
+                        <li><strong>fluidpages</strong> ermöglicht PageController</li>
+                        <li class="ft-fragment"><strong>fluidcontent</strong> ermöglicht ContentController</li>
+                        <li class="ft-fragment">Beispiel <strong>fluidcontent_core</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="/section-2/page-3" class="ft-page" data-id="page-4" data-title="toc">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>Regeln</h1>
+                        <ul>
+                            <li><strong>fluidpages</strong> => PageController / ActionName = TemplateName</li>
+							<li><strong>fluidcontent</strong> => ContentController / ActionName = TemplateName</li>
+                            <li class="ft-fragment">PageController / ContentController / CoreContentController nicht anderweitig verwenden</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+			<div id="/section-2/page-4" class="ft-page" data-id="page-4" data-title="toc">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Datenfluss</h1>
+						<ul>
+							<li class="ft-fragment">Automapping von Template-Variablen mit Prefix <strong>settings.</strong> auf $this->settings</li>
+							<li class="ft-fragment">Zusätzliche Variablen wie üblich per $this->view->assign( 'foo', $bar )</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+            <div id="/section-2/page-5" class="ft-page" data-id="page-5" data-title="toc">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>Demo</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ft-section" data-id="section-3">
+            <div id="/section-3/page-1" class="ft-page" data-id="page-3" data-title="retrospektiv">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>Plugin-Konfiguration via Fluid</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="/section-3/page-2" class="ft-page" data-id="page-4" data-title="csc">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                    <h1>Bisher I</h1>
+					<pre data-src="plugin-old.txt" class="language-php"></pre>
+                   </div>
+                </div>
+            </div>
+			<div id="/section-3/page-3" class="ft-page" data-id="page-4" data-title="csc">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Bisher II</h1>
+						<pre data-src="flexform-old.xml" class="language-markup"></pre>
+					</div>
+				</div>
+			</div>
+            <div id="/section-3/page-4" class="ft-page" data-id="page-4" data-title="templavoila">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>Flux I</h1>
+						<pre data-src="plugin-new.txt" class="language-php"></pre>
+                   </div>
+                </div>
+            </div>
+			<div id="/section-3/page-5" class="ft-page" data-id="page-5" data-title="templavoila">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Flux II</h1>
+						<pre data-src="flexform-new.xml" class="language-markup"></pre>
+					</div>
+				</div>
+			</div>
+			<div id="/section-3/page-6" class="ft-page" data-id="page-5" data-title="toc">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Demo</h1>
+					</div>
+				</div>
+			</div>
+        </div>
+		<div class="ft-section" data-id="section-4">
+			<div id="/section-4/page-1" class="ft-page" data-id="page-3" data-title="retrospektiv">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>TCA-Building via Fluid</h1>
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-2" class="ft-page" data-id="page-4" data-title="csc">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Registrierung</h1>
+						<pre class="language-php">
+<code>\FluidTYPO3\Flux\Core::registerAutoFormForModelObjectClassName('FluidTYPO3\Fluidshare\Domain\Model\Gist');</code></pre>
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-3" class="ft-page" data-id="page-4" data-title="csc">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Annotations</h1>
+						<pre class="language-php">
+/**
+ * @Flux\Label
+ * @Flux\Form\Field input(size: 100)
+ * @Flux\Form\Sheet options
+ * @validate NotEmpty
+ * @validate Text
+ * @var string
+ */
+protected $title;
+</code></pre>
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-4" class="ft-page" data-id="page-4" data-title="templavoila">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>TCA</h1>
+						<img src="tca_result.png">
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-5" class="ft-page" data-id="page-5" data-title="templavoila">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Backend Form</h1>
+						<img src="be-form.png">
+					</div>
+				</div>
+			</div>
+			<div id="/section-4/page-6" class="ft-page" data-id="page-5" data-title="toc">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>Demo</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+        <div class="ft-section" data-id="section-5">
+            <div id="/section-5/page-1" class="ft-page" data-id="page-1" data-title="informations">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>Quellen, Informationen</h1>
+                        <ul>
+                            <li><a href="http://fluidtypo3.org">fluidtypo3.org</a> - Dokumentation, ViewHelper, Fluid-Schemata, Kontakt)</a></li>
+                            <li><a href="http://github.com/FluidTYPO3">github.com/FluidTYPO3</a> - Code</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ft-section" data-id="section-6">
+            <div id="/section-6/page-1" class="ft-page" data-id="page-1" data-title="advanced-fluidtypo3">
+                <div class="stack-center">
+                    <div class="stacked-center">
+                        <h1>Weiterführendes / Ausblick</h1>
+                        <ul>
+                            <li><strong>Builder</strong> - erzeugt Grundstruktur von fluxbasierten Provider-Extensions</li>
+                            <li><strong>View</strong> - ermöglicht Overlayfunktionalität für Fluid-Templates Dritter</li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+		<div class="ft-section" data-id="section-10">
+			<div id="/section-10/page-1" class="ft-page" data-id="page-1" data-title="advanced-fluidtypo3">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>One more thing</h1>
+					</div>
+				</div>
+			</div>
+			<div id="/section-10/page-2" class="ft-page" data-id="page-1" data-title="advanced-fluidtypo3">
+				<div class="stack-center">
+					<div class="stacked-center">
+						<h1>EXT:site</h1>
+						<ul>
+							<li class="ft-fragment">Erzeugt komplett konfiguriertes FluidTYPO3 per Mausklick</li>
+							<li class="ft-fragment">First self destructive extension</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
     </div>
 
     <script src="bower_components/Flowtime.js/js/brav1toolbox.js"></script>
